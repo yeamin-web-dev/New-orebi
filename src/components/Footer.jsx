@@ -4,6 +4,10 @@ import last from "../assets/logo.png"
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTiktok } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
+import "slick-carousel/slick/slick.css";
+import Slider from "react-slick";
+import { GrLinkNext } from "react-icons/gr";
+import { GrLinkPrevious } from "react-icons/gr";
 
 const Footer = () => {
   return (

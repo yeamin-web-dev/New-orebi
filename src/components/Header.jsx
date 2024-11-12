@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.png'
 import Container from './Container';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineMenu,AiOutlineClose } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,8 +21,10 @@ const Header = () => {
 
           <div className='hidden md:block w-3/4'>
             <ul className='flex gap-[39px] justify-center'>
+              <Link to='/'>
               <li className='text-[16px] font-sans font-semibold cursor-pointer'>Home</li>
-              <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>Shop</li>
+              </Link>
+              <Link to="/shop"><li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>Shop</li></Link>
               <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>About</li>
               <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>Contacts</li>
               <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>Journal</li>
@@ -38,8 +41,8 @@ const Header = () => {
         {isOpen && (
           <div className='md:hidden text-center bg-[red] text-[#fff] h-[220px] '>
             <ul className='flex flex-col gap-4 p-4'>
-              <li className='text-[16px] font-sans font-semibold cursor-pointer'>Home</li>
-              <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>Shop</li>
+             <Link> <li className='text-[16px] font-sans font-semibold cursor-pointer'>Home</li></Link>
+             <Link> <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>Shop</li></Link>
               <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>About</li>
               <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>Contacts</li>
               <li className='text-[16px] font-sans hover:font-semibold cursor-pointer'>Journal</li>
